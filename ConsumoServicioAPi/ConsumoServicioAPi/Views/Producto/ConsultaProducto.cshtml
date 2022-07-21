@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "ConsultaProducto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Consumir Producto</h2>
+
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/ConsumoAngular/appProducto.js"></script>
+
+<html ng-app="ProductoModule">
+<head>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/ConsumoAngular/appProducto.js"></script>
+</head>
+<body>
+    <div ng-controller="ProductoController">
+
+
+        <table class="table">
+            <tr>
+                <th>Codigo</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Stock</th>
+            </tr>
+
+
+            <tr ng-repeat="p in ListProducto">
+                <td>
+                    {{p.idproducto}}
+
+                </td>
+                <td>
+                    {{p.nombre}}
+
+                </td>
+                <td>
+                    {{p.precio}}
+
+                </td>
+                <td>
+                    {{p.stock}}
+
+                </td>
+                <td>
+                </td>
+            </tr>
+
+
+        </table>
+    </div>
+</body>
+</html>
+

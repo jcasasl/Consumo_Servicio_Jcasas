@@ -1,0 +1,52 @@
+﻿
+<h2>Consumiendo  Lista Cliente</h2>
+
+
+@{
+    ViewBag.Title = "Consultar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/ConsumoAngular/appCliente.js"></script>
+
+<html ng-app="ClienteModule">
+<head>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/ConsumoAngular/appCliente.js"></script>
+</head>
+<body>
+    <div ng-controller="ClienteController">
+
+      
+        <table class="table">
+            <tr>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Nombres</th>
+
+            </tr>
+
+
+            <tr ng-repeat="p in ListCliente">
+                <td>
+                    {{p.apellidoP}}
+
+                </td>
+                <td>
+                    {{p.apellidoM}}
+
+                </td>
+                <td>
+                    {{p.nombres}}
+
+                </td>
+                <td>
+                </td>
+            </tr>
+
+
+        </table>
+    </div>
+</body>
+</html>
